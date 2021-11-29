@@ -1,9 +1,12 @@
 ﻿# PDF Generator
 ## ASP.NET service to convert HTML to PDF using Winnovative HTML to PDF Converter
 To convert HTML to PDF:
-1. Open solution in VS 2019
-2. Run locally using IIS Express
-3. Send a POST request containing HTML in the body of the request
+1. Set the environment variable HtmlToPdfLicense to your Winnovative license key
+   or use the demo key "fvDh8eDx4fHg4P/h8eLg/+Dj/+jo6Og="
+2. Open solution in VS 2019
+3. Add "wnvhtmltopdf.dll" from the root of the project to References
+4. Run locally using IIS Express
+5. Send a POST request containing HTML in the body of the request
 
 ```
 curl --location --request POST 'https://localhost:44336/api/PdfGenerator' \
