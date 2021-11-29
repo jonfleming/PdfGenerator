@@ -1,8 +1,9 @@
 ﻿# PDF Generator
 ## ASP.NET service to convert HTML to PDF using Winnovative HTML to PDF Converter
 To convert HTML to PDF:
-1. Run locally using IIS Express
-2. Send a request containing HTML
+1. Open solution in VS 2019
+2. Run locally using IIS Express
+3. Send a POST request containing HTML in the body of the request
 
 ```
 curl --location --request POST 'https://localhost:44336/api/PdfGenerator' \
@@ -11,6 +12,17 @@ curl --location --request POST 'https://localhost:44336/api/PdfGenerator' \
 ```
 
 # Postman
+Method: POST
+URL: https://localhost:44336/api/PdfGenerator
+Headers: Content-Type: text/plain
+Body:
+```
+<html>
+  <body>
+    This is a test
+  </body>
+</html
+```
 You can click the dropdown next to Send and select "Send and Download" to be prompted for a filename to save the PDF response.
 
 # Javascript
